@@ -23,8 +23,10 @@
     "livereload": "^0.9.3",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
+    "npm": "^8.4.0",
     "sequelize": "^6.5.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
