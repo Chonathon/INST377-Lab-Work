@@ -12,6 +12,7 @@
     justify-content: space-around;
   }
 
+
   .section {
     width: 100%;
     height: 300px;
@@ -20,10 +21,7 @@
     align-items: center;
   }
 
-  .section img {
-      object-position: center;
-      object-fit: cover;
-  }
+
 
   .title {
     justify-content: flex-start;
@@ -39,13 +37,13 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #5995DA;
     height: 80px;
   }
 
   .menu_items {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,12 +65,43 @@
   .header {
       flex-direction: column;
       justify-content: flex-end;
+  
+  }
+
+  .header img {
+    max-width: 80%;
+    display: flex;
+    align-items: stretch;
   }
 
   
   .header {
     background-color: #B2D6FF;
   }
+
+  .photo_grid_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px;
+
+  }
+  .photo_grid_item {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .photo_grid_item img {
+    object-position: center;
+    object-fit: contain;
+    width: 100%;
+}
   
   .three {
     background-color: #B9D6FB;
@@ -94,28 +123,21 @@
     background-color: #C8C6FA;
   }
 
+  footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    order: 6;
+}
+
 
   /* Mobile Styles */
   @media only screen and (max-width: 400px) {
     body {
-      background-color: #F09A9D; /* Red */
+    
     }
 
-
-  }
-  
-  /* Tablet Styles */
-  @media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-      background-color: #fff; /* Yellow */
-    }
-    .one,
-    .two,
-    .three,
-    .four,
-    .five {
-      width: 50%;
-    }
     .one {
         order: 5;
     }
@@ -136,23 +158,12 @@
         order: 2;
     }
 
-
-  
-      
-
-
       .sec_menu {
           display: flex;
           justify-content: space-between;
           width: 100%;
           margin-top: 4em;
           margin-bottom: 2em;
-      }
-
-      footer {
-          display: flex;
-          align-items: flex-start;
-          order: 6;
       }
 
       footer > div {
@@ -165,27 +176,145 @@
       footer > div:nth-of-type(1) {
           width: 40%;
           background-color: #5995DA;
+          flex: 1;
       }
       
       footer > div:nth-of-type(2) {
         width: 20%;
         background-color: #B2D6FF;
+        flex: 2;
       }
       
       footer > div:nth-of-type(3) {
         width: 40%;
         background-color: #5995DA;
+        flex: 1;
       }
+
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+      background-color: #fff; /* Yellow */
+    }
+
+    .one {
+        order: 5;
+    }
+
+    .two {
+        order: 1;
+    }
+
+    .three {
+        order: 4;
+    }
+
+    .four {
+        order: 3;
+    }
+
+    .five {
+        order: 2;
+    }
+
+      .menu_items {
+        width: 100%;
+      }
+
+      .sec_menu {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 4em;
+          margin-bottom: 2em;
+      }
+
+      footer > div {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items:flex-start;
+      }
+
+      footer > div:nth-of-type(1) {
+        width: 40%;
+        background-color: #5995DA;
+      
+    }
+    
+    footer > div:nth-of-type(2) {
+      width: 20%;
+      background-color: #B2D6FF;
+    }
+    
+    footer > div:nth-of-type(3) {
+      width: 40%;
+      background-color: #5995DA;
+    }
 
   }
   
  /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     .page {
-      width: 960px;
       margin: 0 auto;
     }
 
+    .one {
+        order: 4;
+    }
+
+    .two {
+        order: 2;
+    }
+
+    .three {
+        order: 1;
+    }
+
+    .four {
+        order: 5;
+    }
+
+    .five {
+        order: 3;
+    }
+
+      .sec_menu {
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          margin-top: 4em;
+          margin-bottom: 2em;
+      }
+
+      .section-header {
+        width: 100%;
+      }
+
+      footer > div {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items:flex-start;
+      }
+
+      footer > div:nth-of-type(1) {
+        width: 20%;
+        background-color: #5995DA;
+    }
+    
+    footer > div:nth-of-type(2) {
+      width: 60%;
+      background-color: #B2D6FF;
+    }
+    
+    footer > div:nth-of-type(3) {
+      width: 20%;
+      background-color: #5995DA;
+    }
  
 
   }
