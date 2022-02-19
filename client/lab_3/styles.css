@@ -231,6 +231,10 @@
           margin-bottom: 2em;
       }
 
+      .photo_grid_container {
+        max-width: 80%;
+      }
+
       footer > div {
           height: 100%;
           display: flex;
