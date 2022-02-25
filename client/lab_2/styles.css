@@ -115,10 +115,6 @@ nav a {
   display: block;
 }
 
-.section_4:hover {
-  background-color: blue;
-}
-
 .section_4 div.text{
   display: block;
   border-radius: 4px;
