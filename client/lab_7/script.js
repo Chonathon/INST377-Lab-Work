@@ -62,11 +62,21 @@ async function mainEvent() {
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
       });
-      console.log(selectResto);
+      // console.log(selectResto);
       createHtmlList(selectResto);
       // console.log('matchResto');
+    });
 
+    zipcode.addEventListener('input', async (event) => {
+      if (currentArray.length < 1) {
+        return;
+      }
+      const selectZip = currentArray.filter((item) => item.zip.includes(event.target.value)
+        // console.log(item.zip);
+      );
 
+      createHtmlList(selectZip);
+      // });
     });
 
     form.addEventListener('submit', async (submitEvent) => {
