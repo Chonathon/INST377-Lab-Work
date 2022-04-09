@@ -39,7 +39,7 @@ function addMapMarkers(map, collection) {
     }
   });
 
-  collection.forEach(item => {
+  collection.forEach((item) => {
     const point = item.geocoded_column_1?.coordinates;
     console.log(item.geocoded_column_1?.coordinates);
     L.marker([point[1], point[0]]).addTo(map);
@@ -78,15 +78,12 @@ async function mainEvent() {
     localStorage.setItem(retrievalVar, JSON.stringify(arrayFromJson.data));
   }
 
-
   const storedDataString = localStorage.getItem(retrievalVar);
   const storedDataArray = JSON.parse(storedDataString);
   console.log(storedDataArray);
 
-
   // console.log('data is here');
   // const arrayFromJson = {data: []}; // TODO: remove debug tool
-
 
   // This if statement is to prevent a race condition on data load
   if (storedDataString?.length > 0) {
@@ -132,7 +129,6 @@ async function mainEvent() {
       createHtmlList(currentArray);
 
       addMapMarkers(map, currentArray);
-      
     });
   }
 }
