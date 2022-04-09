@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Form 1</title>
+</head>
+
+  <body>
+
+
+    <div class="container">
+      <header class="wrapper">
+        <h1>Sean's Lab 5</h1>
+      </header>
+      
+      <div class="columns">
+        <div class="wrapper">
+              <form class="hunger-form" action="">
+                <div class="form_row">
+                  <label for="resto_name">Restaurant Name</label>
+                  <input name="resto_name" id="resto_name" type="text">
+                </div>
+                  <div class="form_row">
+                    <label for="zipcode">Zipcode</label>
+                    <input name="zipcode" id="zipcode" type="text">
+                  </div>
+      
+                  <div class="form_row">
+                  <fieldset class="radio-group">
+                    <legend>Veggie or Vegan?</legend>
+                    <label for="y" class="radio-label">Yes</label>
+                    <input type="radio"
+                           name="yes"
+                           value="y">
+                    <label for="n" class="radio-label">No</label>
+                    <input type="radio"
+                           name="no"
+                           value="n">
+                  </fieldset>
+                </div>
+                <div class="form_row">
+                  <button class="submit">Get Restaurants</button>
+                </div>
+              </form>
+        
+      </div>
+            <div class="wrapper">
+              <div class="page-item">
+                <h2>Restaurant List</h2>
+                <ul class="resto-list"></ul>
+              </div>
+            </div>
+      
+        </div>
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
