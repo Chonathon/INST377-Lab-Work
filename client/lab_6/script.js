@@ -20,7 +20,6 @@ function restArrayMake(dataArray) {
   return listItems;
 }
 
-// TODO: Make HTML from collection
 function createHtmlList(collection) {
   // console.log('fired HTML creator');
   // console.log(collection);
