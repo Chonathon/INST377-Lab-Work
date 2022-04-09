@@ -99,7 +99,7 @@ async function mainEvent() {
       }
       // console.log(event.target.value);
 
-      const selectResto = storedDataString.filter((item) => {
+      const selectResto = storedDataArray.data.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
         return lowerName.includes(lowerValue);
