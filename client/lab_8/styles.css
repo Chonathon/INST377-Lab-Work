@@ -16,6 +16,12 @@
     min-height: 100%;
     color: #505051;
   }
+
+  #map { 
+  height: 400px;
+  width: 600px;
+  margin-bottom: 1em;
+}
   
   /* Page Layout */
   .columns {

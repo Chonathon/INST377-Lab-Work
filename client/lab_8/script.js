@@ -18,6 +18,19 @@ function restArrayMake(dataArray) {
   return listItems;
 }
 
+function initMap() {
+  const map = L.map('map').setView([51.505, -0.09], 13);
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+  }).addTo(map);
+  return map;
+}
+
 // TODO: Make HTML from collection
 function createHtmlList(collection) {
   // console.log('fired HTML creator');
@@ -40,11 +53,14 @@ async function mainEvent() {
 
   const resto = document.querySelector('#resto_name');
   const zipcode = document.querySelector('#zipcode');
+  const map = initMap();
   submit.style.display = 'none';
 
-  const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
-  const arrayFromJson = await results.json(); // This changes it into data we can use - an object
+  // const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
+  // const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   // console.log('data is here');
+  let arrayFromJson = {data: []}; //TODO: remove debug tool
+
 
   // This if statement is to prevent a race condition on data load
   if (arrayFromJson.data.length > 0) {
